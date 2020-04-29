@@ -12,7 +12,6 @@ def getAllXpaths():           # function receives all pointers (xpath(-es)) to o
     for li_i in range(1,197):   # hardcoded range determined with chrome developer tools
         xpath = "/html/body/main/article/div[4]/div[1]/div[7]/ol/li[{}]".format(li_i)
         xpaths.append(xpath)
-        li_i+=1
     return xpaths
 
 def getCapitalsList(data): # function recieves xpaths[] list and parse its data to create a final list [Country, Capital]
