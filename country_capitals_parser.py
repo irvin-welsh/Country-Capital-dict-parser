@@ -24,9 +24,10 @@ def convert_list_to_dict(data):
         capitals.split(":")
         country_capitals.append(capitals)
     print(country_capitals,len(country_capitals))
-    results_file = open("parsed.txt", 'a')
+    results_file = open("parsed.txt", 'w')
     results_file.write(str(country_capitals)+'')
     results_file.close()
 
 get_all_xpaths()
 convert_list_to_dict(xpaths)
+driver.quit()
