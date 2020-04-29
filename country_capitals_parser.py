@@ -23,7 +23,7 @@ def getCapitalsList(data): # function recieves xpaths[] list and parse its data 
         country_capitals.append(capitals)   # insert correctly formatted data to the country_capitals[] list
     print(country_capitals,len(country_capitals)) # simple checking that all xpaths[] items has been successfully processed
     results_file = open("parsed.txt", 'w')        # make a file just to save the output and not to bother our target URL anytime when Quiz Master is running
-    results_file.write(str(country_capitals)) # simple format of the file input
+    results_file.write(str(country_capitals)o   ) # simple format of the file input
     results_file.close()    # ending up with a file
 
 getAllXpaths()
