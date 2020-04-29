@@ -1,7 +1,6 @@
 import time
 from selenium import webdriver
 import requests
-result_dict={}
 xpaths=[]
 
 driver = webdriver.Chrome('/bin/chromedriver')  # Optional argument, if not specified will search pathself.
