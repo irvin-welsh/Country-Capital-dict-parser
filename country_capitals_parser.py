@@ -18,13 +18,12 @@ def getCapitalsList(data): # function recieves xpaths[] list and parse its data 
     country_capitals=[]    # create an empty list to store [Country, Capital]
     for data in range(len(xpaths)):     # iterate over the xpaths[] list to fetch its data
         capitals = driver.find_element_by_xpath(str(xpaths[data])).text    # get text content from each xpath in the list
-        capitals.split(":")     # format output received from webdriver
-        country_capitals.append(capitals)   # insert correctly formatted data to the country_capitals[] list
-    print(country_capitals,len(country_capitals)) # simple checking that all xpaths[] items has been successfully processed
+        formatted_capitals = capitals.split(": ") # important to split not only by a semicolon, but additionally with a space after it, to get correct list items
+        country_capitals.append(formatted_capitals)   # insert correctly formatted data to the country_capitals[] list
+        geo_dictionary = dict(country_capitals) # creating a dictionary object which will be reused in Quiz Master
     results_file = open("parsed.txt", 'w')        # make a file just to save the output and not to bother our target URL anytime when Quiz Master is running
-    results_file.write(str(country_capitals)o   ) # simple format of the file input
+    results_file.write(str(geo_dictionary)) # simple format of the file input
     results_file.close()    # ending up with a file
-
 getAllXpaths()
 getCapitalsList(xpaths)
 driver.quit()               # closing webdriver (browser)
