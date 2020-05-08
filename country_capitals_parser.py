@@ -24,6 +24,8 @@ def getCapitalsList(data): # function recieves xpaths[] list and parse its data 
     results_file = open("parsed.txt", 'w')        # make a file just to save the output and not to bother our target URL anytime when Quiz Master is running
     results_file.write(str(geo_dictionary)) # simple format of the file input
     results_file.close()    # ending up with a file
+    return country_capitals
+    
 getAllXpaths()
 getCapitalsList(xpaths)
 driver.quit()               # closing webdriver (browser)
