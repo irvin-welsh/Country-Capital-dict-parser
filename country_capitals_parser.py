@@ -25,6 +25,8 @@ def getCapitalsList(data): # function recieves xpaths[] list and parse its data 
     results_file.write(str(geo_dictionary)) # simple format of the file input
     results_file.close()    # ending up with a file
     return country_capitals
+
+
     
 getAllXpaths()
 getCapitalsList(xpaths)
