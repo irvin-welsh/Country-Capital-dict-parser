@@ -1,6 +1,7 @@
 import time
 from selenium import webdriver
 import requests
+
 xpaths=[] # create an empty list to store all pointers to data we're looking for
 
 driver = webdriver.Chrome('/bin/chromedriver')  # initialize webdriver
@@ -27,7 +28,7 @@ def getCapitalsList(data): # function recieves xpaths[] list and parse its data 
     return country_capitals
 
 
-    
+
 getAllXpaths()
 getCapitalsList(xpaths)
 driver.quit()               # closing webdriver (browser)
