@@ -15,7 +15,6 @@ def getAllXpaths():           # function receives all pointers (xpath(-es)) to o
         xpaths.append(xpath)
     return xpaths
 
-
 def getCapitalsList(data): # function recieves xpaths[] list and parse its data to create a final list [Country, Capital]
     country_capitals=[]    # create an empty list to store [Country, Capital]
     for data in range(len(xpaths)):     # iterate over the xpaths[] list to fetch its data
@@ -27,8 +26,6 @@ def getCapitalsList(data): # function recieves xpaths[] list and parse its data 
     results_file.write(str(geo_dictionary)) # simple format of the file input
     results_file.close()    # ending up with a file
     return country_capitals
-
-
 
 getAllXpaths()
 getCapitalsList(xpaths)
