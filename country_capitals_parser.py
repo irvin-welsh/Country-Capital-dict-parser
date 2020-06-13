@@ -4,6 +4,7 @@ import requests
 
 xpaths=[] # create an empty list to store all pointers to data we're looking for
 
+
 driver = webdriver.Chrome('/bin/chromedriver')  # initialize webdriver
 URL="https://www.thoughtco.com/capitals-of-every-independent-country-1434452" # assign target URL to the variable URL
 driver.get(URL) # recieve target webpage, using selenium
